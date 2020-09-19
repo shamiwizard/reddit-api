@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Api::V1::Registrations', type: :request do
   let(:user) { attributes_for(:user) }
 
-  describe 'GET /create' do
+  describe 'POST /create' do
     context 'where json is correct' do
       it 'returns http success' do
         post '/api/v1/sign_up', params: { user: user }
