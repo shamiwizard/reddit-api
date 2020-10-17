@@ -8,11 +8,7 @@ Rails.application.routes.draw do
         post 'sign_in', to: 'sessions#create'
       end
 
-      get 'user/index'
-      get 'user/show'
-      get 'user/create'
-      get 'user/update'
-      get 'user/destroy'
+      resource :user, only: %i[update destroy show]
     end
   end
 end
