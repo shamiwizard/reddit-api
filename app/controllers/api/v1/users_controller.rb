@@ -48,7 +48,8 @@ class Api::V1::UsersController < ApplicationController
       :password_confirmation,
       :username,
       :last_name,
-      :first_name
+      :first_name,
+      :photo
     )
   end
 end
