@@ -8,7 +8,6 @@ describe UserPhotoUploader do
   let(:uploader) { UserPhotoUploader.new(user, :photo) }
   let(:path_to_photo) { "#{Rails.root}/spec/fixtures/arrow.jpg" }
 
-
   before do
     UserPhotoUploader.enable_processing = true
     File.open(path_to_photo) { |f| uploader.store!(f) }

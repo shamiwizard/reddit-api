@@ -8,7 +8,9 @@ Rails.application.routes.draw do
         post 'sign_in', to: 'sessions#create'
       end
 
-      resource :user, only: %i[update destroy show]
+      resource :user, only: %i[update destroy show] do
+        put 'update_photo', to: 'users#update_photo'
+      end
     end
   end
 end

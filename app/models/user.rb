@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   acts_as_token_authenticatable
-  mount_base64_uploader :photo, UserPhotoUploader
+  mount_uploader :photo, UserPhotoUploader
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
